@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Download de Arquivos</title>
+</head>
+
+<body>
+  <h1>Download de Arquivos</h1>
+  <div>
+    <a href="home.html">Pagina home</a>
+  </div>
+  <div>
+    <a href="downloads.html">Baixe aqui seus arquivos</a>
+  </div>
+  <div>
+    <a href="uploads.html">Adicione aqui seus arquivos</a>
+  </div>
+  <p>Selecione o arquivo que deseja baixar:</p>
+  <select id="arquivos">
+    <option value="">Selecione...</option>
+    <option value="arquivo1">Arquivo 1</option>
+    <option value="arquivo2">Arquivo 2</option>
+    <option value="arquivo3">Arquivo 3</option>
+  </select>
+  <button onclick="baixarArquivo()">Baixar</button>
+
+  <script>
+    function baixarArquivo() {
+      var arquivoSelecionado = document.getElementById("arquivos").value;
+      if (arquivoSelecionado != "") {
+        window.location.href = "/download/" + arquivoSelecionado;
+      }
+    }
+  </script>
+</body>
+
+</html>
